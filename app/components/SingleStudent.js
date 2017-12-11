@@ -37,7 +37,6 @@ class SingleStudent extends React.Component {
   render () {
     const student = this.props.student
     const tempCampus = this.props.campuses.find((campus) => {
-      console.log(campus.id, student.campusId)
       return campus.id === student.campusId
     })
     const studentCampus = tempCampus ? tempCampus : {};
