@@ -14,7 +14,15 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   module: {
-    loaders: [
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
       {
         test: /jsx?$/,
         include: resolve(__dirname, './app'),
